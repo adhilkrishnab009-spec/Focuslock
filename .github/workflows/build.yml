@@ -299,8 +299,8 @@ jobs:
       - run: gh release create "build-${{ github.run_number }}" proj/app/build/outputs/apk/debug/app-debug.apk --title "FocusLock build ${{ github.run_number }}" --notes "Debug build"
         env:
           GH_TOKEN: ${{ github.token }}
-- name: Upload APK
-  uses: actions/upload-artifact@v4
-  with:
-    name: app-debug
-    path: app/build/outputs/apk/debug/app-debug.apk
+      - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+      name: app-debug
+      path: app/build/outputs/apk/debug/app-debug.apk
